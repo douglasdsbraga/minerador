@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  cpuminer:
+    build: .
+    container_name: cpuminer-opt
+    restart: unless-stopped
+    command: /cpuminer-opt/cpuminer -a ethash -o stratum+tcp://etc.poolbinance.com:1800 -u baleiaAzui.001 -p 123456
